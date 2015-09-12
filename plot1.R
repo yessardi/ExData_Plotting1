@@ -2,7 +2,7 @@
 epc = read.table("household_power_consumption.txt",sep = ";", 
                  header = TRUE, stringsAsFactors = FALSE)
 
-## Format the date and global active power variables
+## Format the variables
 epc$Date = as.Date(epc$Date, "%d/%m/%Y")
 epc$Global_active_power = as.numeric(epc$Global_active_power,na.rm = TRUE)
 
